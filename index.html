@@ -10,11 +10,12 @@
     <nav id="navbar">
         <h2>HTML Documentation</h2>
         <ul>
-            <li><a href="#what_is">What is HTML ?</a></li>
-            <li><a href="#getting_started">Getting Started</a></li>
-            <li><a href="#html_page">Entire HTML page</a></li>
-            <li><a href="#css_js">Adding CSS and JS</a></li>
-            <li><a href="#reference">Reference</a></li>
+            <li><a href="#what_is" class="nav-link">What is HTML ?</a></li>
+            <li><a href="#getting_started" class="nav-link">Getting Started</a></li>
+            <li><a href="#html_page" class="nav-link">Entire HTML page</a></li>
+            <li><a href="#css_js" class="nav-link">Adding CSS and JS</a></li>
+            <li><a href="#hyperlinks" class="nav-link">Creating Hyperlinks</a></li>
+            <li><a href="#reference" class="nav-link">Reference</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -38,11 +39,11 @@
             <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
             <h3>Void elements</h3>
             <p>Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called void elements. For example, the &lt;img&gt; element embeds an image file onto a page:</p>
-            <p class="code">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" /&gt;</p>
+            <code class="code">&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" /&gt;</code>
         </section>
         <section class="main-section" id="html_page">
             <h2>Anatomy of an HTML document</h2>
-            <p class="code">
+            <code class="code">
                 &lt;!doctype html> <br>
                 &lt;html lang="en-US"><br>
                 <span class="invis">...</span>&lt;head><br>
@@ -53,7 +54,7 @@
                 <span class="invis">......</span>&lt;p>This is my page&lt;/p><br>
                 <span class="invis">...</span>&lt;/body><br>
                 &lt;/html><br>
-            </p>
+            </code>
             <ol>
                 <li><span class="bold">&lt;!DOCTYPE html></span> - The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML.</li>
                 <li><span class="bold">&lt;html>&lt;/html></span> - The &lt;html> element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
@@ -66,10 +67,16 @@
         <section class="main-section" id="css_js">
             <h2>Applying CSS and JavaScript to HTML</h2>
             <p>Just about all websites you'll use in the modern day will employ CSS to make them look cool, and JavaScript to power interactive functionality, such as video players, maps, games, and more. These are most commonly applied to a web page using the &lt;link> element and the &lt;script> element, respectively.</p>
-            <p>The &lt;link> element should always go inside the head of your document. This takes two attributes, rel="stylesheet", which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:</p>
-            <p class="code">&lt;link rel="stylesheet" href="my-css-file.css" /></p>
+            <p>The &lt;link> element should always go inside the head of your document. This takes two attributes, <i>rel="stylesheet"</i>, which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:</p>
+            <code class="code">&lt;link rel="stylesheet" href="my-css-file.css" /></code>
             <p>The &lt;script> element should also go into the head, and should include a src attribute containing the path to the JavaScript you want to load, and defer, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most reliable one to use for modern browsers.</p>
-            <p class="code">&lt;script src="my-js-file.js" defer>&lt;/script></p>
+            <code class="code">&lt;script src="my-js-file.js" defer>&lt;/script></code>
+        </section>
+        <section class="main-section" id="hyperlinks">
+            <h2>Creating hyperlinks</h2>
+            <p>Hyperlinks are one of the most exciting innovations the Web has to offer. They've been a feature of the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address. Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).</p>
+            <p>A basic link is created by wrapping the text or other content inside an &lt;a> element and using the href attribute, also known as a Hypertext Reference, or target, that contains the web address.</p>
+            <code class="code">&lt;a href="https://www.mozilla.org/en-US/">the Mozilla homepage&lt;/a></code>
         </section>
         <section class="main-section" id="reference">
             <h2>Reference</h2>
