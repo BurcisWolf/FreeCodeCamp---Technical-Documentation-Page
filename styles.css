@@ -34,7 +34,7 @@ nav ul li a:hover {
 main {
     padding: 20px 0 0 320px;
 }
-main h2 {
+main header {
     font-size: 28px;
     padding: 0 0 20px 0;
 }
@@ -68,4 +68,17 @@ main .main-section .code {
 }
 main .main-section ol {
     padding-bottom: 15px;
+}
+@media screen and (width < 800px) {
+    nav {
+        position: relative;
+        width: 100%;
+        border: none;
+    }
+    main {
+        padding: 20px 20px 0 20px;
+    }
+    main img {
+        width: 100%;
+    }
 }
