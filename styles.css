@@ -5,9 +5,11 @@
     font-family: 'Roboto',sans-serif; 
 }
 nav {
-    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 300px;
-    height: 100vh;
+    height: 100%;
     border-right: 2px solid grey;
 }
 nav h2 {
@@ -19,7 +21,7 @@ nav ul {
     border-top: 2px solid grey;
 }
 nav ul li {
-    margin: 10px 0 10px 0;
+    margin: 15px 0 15px 0;
     list-style: none;
 }
 nav ul li a {
@@ -41,4 +43,26 @@ main p {
 }
 .bold {
     font-weight: 700;
+}
+main h3 {
+    font-size: 20px;
+    padding: 0 0 20px 10px;
+}
+main img {
+    margin: 0 0 10px 10px; 
+    border-radius: 10px;
+}
+main .main-section ul {
+    padding-bottom: 15px;
+}
+main .main-section .code {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 0 15px 10px;
+    padding: 15px 15px 15px 15px;
+    display: inline-block;
+    background-color: bisque;
+    border-radius: 5px;
+}
+.invis {
+    color: bisque;
 }
