@@ -66,3 +66,6 @@ main .main-section .code {
 .invis {
     color: bisque;
 }
+main .main-section ol {
+    padding-bottom: 15px;
+}

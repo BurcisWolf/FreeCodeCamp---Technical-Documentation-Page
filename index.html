@@ -12,7 +12,8 @@
         <ul>
             <li><a href="#what_is">What is HTML ?</a></li>
             <li><a href="#getting_started">Getting Started</a></li>
-            <li><a href="#html_page">entire HTML page</a></li>
+            <li><a href="#html_page">Entire HTML page</a></li>
+            <li><a href="#css_js">Adding CSS and JS</a></li>
             <li><a href="#reference">Reference</a></li>
         </ul>
     </nav>
@@ -55,7 +56,20 @@
             </p>
             <ol>
                 <li><span class="bold">&lt;!DOCTYPE html></span> - The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML.</li>
+                <li><span class="bold">&lt;html>&lt;/html></span> - The &lt;html> element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
+                <li><span class="bold">&lt;head>&lt;/head></span> - The &lt;head> element. This element acts as a container for everything you want to include on the HTML page, that isn't the content the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.</li>
+                <li><span class="bold">&lt;meta charset="utf-8"></span> - The &lt;meta> element. This element represents metadata that cannot be represented by other HTML meta-related elements, like &lt;base>, &lt;link>, &lt;script>, &lt;style> or &lt;title>. The charset attribute specifies the character encoding for your document as UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.</li>
+                <li><span class="bold">&lt;title>&lt;/title></span> - The &lt;title> element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.</li>
+                <li><span class="bold">&lt;body>&lt;/body></span> - The &lt;body> element. This contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.</li>
             </ol>
+        </section>
+        <section class="main-section" id="css_js">
+            <h2>Applying CSS and JavaScript to HTML</h2>
+            <p>Just about all websites you'll use in the modern day will employ CSS to make them look cool, and JavaScript to power interactive functionality, such as video players, maps, games, and more. These are most commonly applied to a web page using the &lt;link> element and the &lt;script> element, respectively.</p>
+            <p>The &lt;link> element should always go inside the head of your document. This takes two attributes, rel="stylesheet", which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:</p>
+            <p class="code">&lt;link rel="stylesheet" href="my-css-file.css" /></p>
+            <p>The &lt;script> element should also go into the head, and should include a src attribute containing the path to the JavaScript you want to load, and defer, which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet. There are actually a number of ways to handle loading JavaScript on your page, but this is the most reliable one to use for modern browsers.</p>
+            <p class="code">&lt;script src="my-js-file.js" defer>&lt;/script></p>
         </section>
         <section class="main-section" id="reference">
             <h2>Reference</h2>
